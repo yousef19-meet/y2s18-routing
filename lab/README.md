@@ -30,11 +30,11 @@ use the example code, but let a TA know first!
 template looks like. Remember that templates are in the `templates` folder!
 
 2. You can go back to the command line now and start the server, using 
-`python app.py`. In Chrome, you can go to [http://127.0.0.1:5000],
+`python app.py`. In Chrome, you can go to `http://127.0.0.1:5000`,
 and make sure that you see the template you are expecting to see.
 
 3. Back to coding now! In `app.py`, add a route so that when you navigate to
-[https:127.0.0.1:5000/article/4] you see the `article.html` template where
+`https:127.0.0.1:5000/article/4` you see the `article.html` template where
 `article_id` is 4.
 
 ### Part 2: Displaying an article
