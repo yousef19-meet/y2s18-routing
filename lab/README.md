@@ -1,5 +1,9 @@
 ## Y2 2018 Summer: Routing Lab
 
+Welcome to the routing lab! Please read all the instructions so you don't
+get lost halfway through, but definitely feel free to ask for help if you
+get stuck. Good luck, and have fun!
+
 ### Part 0: Setup
 
 1. Before you start coding, make sure you clone the repository for this lab:
@@ -16,8 +20,8 @@ subl lab &
 3. Double-check that everything still works like it did before.
 In this lab, we're going to be connecting routing with databases,
 so it's important to have a working database! If the database lab
-was not finished or if the code doesn't work, you can also just copy
-over the example code, but let a TA know first :)
+was not finished or if the code doesn't work, you can also just
+use the example code, but let a TA know first!
 
 ### Part 1: Basic Routing
 
@@ -31,12 +35,12 @@ and make sure that you see the template you are expecting to see.
 
 3. Back to coding now! In `app.py`, add a route so that when you navigate to
 [https:127.0.0.1:5000/article/4] you see the `article.html` template where
-`id` is 4.
+`article_id` is 4.
 
 ### Part 2: Displaying an Article
 
 1. Add templating elements to `article.html` so that it can display
-article information, not just the `id`.
+article information, not just the `article_id`.
 
 2. Edit the route you just added in `app.py` to give the
 template all the information it needs. *Hint*: You'll need to access the
@@ -53,9 +57,9 @@ from the command line with `python app.py` again.
 ### Part 3: Displaying all Articles
 
 1. Pick a few articles in your database to be feature articles, and remember
-their `id`s. In `home.html`, add templating code to display the topics of all
-the feature articles using `{% for %}` and `{% endfor %}`. You may want to
-look at older slides for review on how to use them.
+their `article_id`s. In `home.html`, add templating code to display the
+topics of all the feature articles using `{% for %}` and `{% endfor %}`.
+You may want to look at older slides for review on how to use them.
 
 2. Edit the route to the home page to give `home.html` all the information it
 needs to display the feature articles. *Hint*: You'll need to query the
