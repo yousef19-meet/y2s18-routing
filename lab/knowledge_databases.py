@@ -1,4 +1,4 @@
-from model import Base, Knowledge
+from knowledge_model import Base, Knowledge
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

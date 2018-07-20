@@ -9,3 +9,5 @@ class Knowledge(Base):
 	""" Copy your Knowledge class from knowledge_model.py here! """
 	__tablename__ = 'knowledge'
 	article_id = Column(Integer, primary_key=True)
+
+""" Copy your functions from knowledge_model.py here! """
