@@ -23,7 +23,7 @@ so it's important to have a working database! If the database lab
 was not finished or if the code doesn't work, you can also just
 use the example code, but let a TA know first!
 
-### Part 1: Basic Routing
+### Part 1: Basic routing
 
 1. Now for the fun stuff! In `app.py`, change the route for `/` to the
 `home.html` template. You can open `home.html` in Sublime to see what the
@@ -37,7 +37,7 @@ and make sure that you see the template you are expecting to see.
 [https:127.0.0.1:5000/article/4] you see the `article.html` template where
 `article_id` is 4.
 
-### Part 2: Displaying an Article
+### Part 2: Displaying an article
 
 1. Add templating elements to `article.html` so that it can display
 article information, not just the `article_id`.
@@ -54,7 +54,7 @@ use `url_for()`.
 If there are errors and the server goes down, you can restart the server
 from the command line with `python app.py` again.
 
-### Part 3: Displaying all Articles
+### Part 3: Displaying feature articles
 
 1. Pick a few articles in your database to be feature articles, and remember
 their `article_id`s. In `home.html`, add templating code to display the
@@ -71,7 +71,7 @@ bring you to the page for each feature article.
 4. Again, check that everything works on Chrome. Refresh your server if it
 goes down with `python app.py`.
 
-### Part 4. CSS!
+### Part 4. Making it colorful
 
 1. Congratulations! You're done with the routing part of the lab.
 
