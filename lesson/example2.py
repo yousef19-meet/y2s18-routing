@@ -5,8 +5,8 @@ app = Flask(__name__)
 def hello_world():
     return render_template('home.html')
 
-@app.route('/hello/<string:name>')
-def hello_route(name):
+@app.route('/hello')
+def hello_route(name='Emily'):
     return render_template('hello.html', n=name)
 
 app.run(debug=True)

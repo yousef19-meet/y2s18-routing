@@ -2,11 +2,15 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def home_route():
-    return render_template('home_with_link.html')
+def hello_world():
+    return render_template('home.html')
+
+@app.route('/hello')
+def hello_route(name='Emily'):
+    return render_template('hello.html', n=name)
 
 @app.route('/hello/<string:name>')
-def hello_route(name):
-    return render_template('hello_with_link.html', n=name)
+def hello_name_route(name='Emily'):
+    return render_template('hello.html', n=name)
 
 app.run(debug=True)
