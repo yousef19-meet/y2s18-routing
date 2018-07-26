@@ -1,12 +1,14 @@
-## Y2 2018 Summer: Routing Lab
+# Y2 2018 Summer: Routing Lab
 
 Welcome to the routing lab! Please read all the instructions so you don't
 get lost halfway through, but definitely feel free to ask for help if you
 get stuck. Good luck, and have fun!
 
+## Lecture Exercises
+
 ### Part 0: Setup
 
-1. Before you start coding, make sure you clone the repository for this lab:
+Before you start coding, make sure you clone the repository for this lab:
 ```
 cd ~/Desktop
 git clone https://github.com/meet-projects/y2s18-routing.git
@@ -14,45 +16,54 @@ cd y2s18-routing
 subl lab &
 ```
 
-2. From the databases lab yesterday, copy over all the code in
-`knowledge_databases.py` and `knowledge_model.py`.
-
-3. Double-check that everything still works like it did before.
-In this lab, we're going to be connecting routing with databases,
-so it's important to have a working database! If the database lab
-was not finished or if the code doesn't work, you can also just
-use the example code, but let a TA know first!
-
 ### Part 1: Basic routing
 
-1. Now for the fun stuff! In `app.py`, change the route for `/` to the
-`home.html` template. You can open `home.html` in Sublime to see what the
-template looks like. Remember that templates are in the `templates` folder!
+In `app.py`, change the route for `/` to display the `home.html`
+template. You can open `home.html` in Sublime to see what the template
+looks like. Remember that templates are in the `templates` folder!
 
-2. You can go back to the command line now and start the server, using 
-`python app.py`. In Chrome, you can go to `http://127.0.0.1:5000`,
-and make sure that you see the template you are expecting to see.
+*Hint*: Remember functions you've learned in earlier lectures, like
+`render_template`.
 
-3. Back to coding now! In `app.py`, add a route so that when you navigate to
-`http://127.0.0.1:5000/article/4` you see the `article.html` template where
-`article_id` is 4.
+You can go back to the command line now and start the server, using
+`python app.py`. In Chrome, go to `http://127.0.0.1:5000` to see what
+it looks like so far.
 
-### Part 2: Displaying an article
+### Part 2: Variable Routes
 
-1. Add templating elements to `article.html` so that it can display
-article information, not just the `article_id`.
+In `app.py`, add a route and call the function for this route
+`display_student(student_id)`. When you navigate to
+`http://127.0.0.1:5000/student/4` you see the `student.html` template
+where `student_id` is 4.
 
-2. Edit the route you just added in `app.py` to give the
-template all the information it needs. *Hint*: You'll need to access the
-database for this! Take a look at your `knowledge_databases.py` for some
-functions to use.
+*Hint*: The variable `student_id` should have type `int`.
 
-3. In `article.html` add a link to the home page. *Hint*: You may want to
-use `url_for()`.
+### Part 3: URL Building
+
+In `student.html`, add a link to the home page.
+
+*Hint*: Remember how to use `url_for()`.
+
+## Independent Lab
+
+1. In `app.py`, in `display_student(student_id)`, assign a variable
+called `student` to the `Student` object whose `id` is `student_id`.
+*Hint*: In `databases.py`, there is a function called `query_by_id(id)` that
+returns the Student object with the given `id`, which is an `int`.
+
+2. In `student.html`, add some text and the templating elements `{{ name }}`,
+`{{ year }}`, and `{{ finished_lab }}`.
+
+3. Back to `display_student(student_id)` in `app.py`. Edit the return
+statement to give the template all the information it needs.
+*Hint*: `student.name` should give you the `name` attribute of the
+`Student` object called `student`.
 
 4. Refresh your webpage on Chrome to make sure everything works as expected.
 If there are errors and the server goes down, you can restart the server
 from the command line with `python app.py` again.
+
+----------------------
 
 ### Part 3: Displaying feature articles
 
