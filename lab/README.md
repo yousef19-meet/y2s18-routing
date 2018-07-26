@@ -61,9 +61,9 @@ statement to give the template all the information it needs.
 *Hint*: `student.name` should give you the `name` attribute of the
 `Student` object called `student`.
 
-4. Refresh your webpage on Chrome to make sure everything works as expected.
-If there are errors and the server goes down, you can restart the server
-from the command line with `python app.py` again.
+4. Refresh your webpage in the browser to make sure everything works as
+expected. If there are errors and the server goes down, you can restart
+the server from the command line with `python app.py` again.
 
 5. Make your new website prettier by adding your own CSS and additional
 templating like you've learned in the past few days!
@@ -79,5 +79,5 @@ it needs. *Hint*: You'll want to use `query_all()`.
 3. In the `home.html` template, add a link in the same `for` loop which will
 bring you to the page for each student.
 
-4. Again, check that everything works on Chrome. Refresh your server if it
-goes down again, with `python app.py`.
+4. Again, check that everything works in the browser. Refresh your server if
+it goes down again, with `python app.py`.
