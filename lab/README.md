@@ -4,8 +4,6 @@ Welcome to the routing lab! Please read all the instructions so you don't
 get lost halfway through, but definitely feel free to ask for help if you
 get stuck. Good luck, and have fun!
 
-## Lecture Exercises
-
 ### Part 0: Setup
 
 Before you start coding, make sure you clone the repository for this lab:
@@ -15,6 +13,8 @@ git clone https://github.com/meet-projects/y2s18-routing.git
 cd y2s18-routing
 subl lab &
 ```
+
+## Lecture Exercises
 
 ### Part 1: Basic routing
 
@@ -46,6 +46,8 @@ In `student.html`, add a link to the home page.
 
 ## Independent Lab
 
+## Part 1: Displaying student information
+
 1. In `app.py`, in `display_student(student_id)`, assign a variable
 called `student` to the `Student` object whose `id` is `student_id`.
 *Hint*: In `databases.py`, there is a function called `query_by_id(id)` that
@@ -63,28 +65,19 @@ statement to give the template all the information it needs.
 If there are errors and the server goes down, you can restart the server
 from the command line with `python app.py` again.
 
-----------------------
+5. Make your new website prettier by adding your own CSS and additional
+templating like you've learned in the past few days!
 
-### Part 3: Displaying feature articles
+### Part 2: Listing all students
 
-1. Pick a few articles in your database to be feature articles, and remember
-their `article_id`s. In `home.html`, add templating code to display the
-topics of all the feature articles using `{% for %}` and `{% endfor %}`.
-You may want to look at older slides for review on how to use them.
+1. In `home.html`, add templating code to display the name, year, and
+finished_lab status of each student, using `{% for %}` and `{% endfor %}`.
 
-2. Edit the route to the home page to give `home.html` all the information it
-needs to display the feature articles. *Hint*: You'll need to query the
-database for each article you want to feature.
+2. Edit the route to the home page to give `home.html` all the information
+it needs. *Hint*: You'll want to use `query_all()`.
 
 3. In the `home.html` template, add a link in the same `for` loop which will
-bring you to the page for each feature article.
+bring you to the page for each student.
 
 4. Again, check that everything works on Chrome. Refresh your server if it
-goes down with `python app.py`.
-
-### Part 4. Making it colorful
-
-1. Congratulations! You're done with the routing part of the lab.
-
-2. Make your new website prettier by adding your own CSS and additional
-templating like you've learned in the past few days!
+goes down again, with `python app.py`.
