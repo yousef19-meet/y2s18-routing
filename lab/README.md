@@ -46,7 +46,7 @@ In `student.html`, add a link to the home page.
 
 ## Independent Lab
 
-## Part 1: Displaying student information
+### Part 1: Displaying student information
 
 1. In `app.py`, in `display_student(student_id)`, assign a variable
 called `student` to the `Student` object whose `id` is `student_id`.
