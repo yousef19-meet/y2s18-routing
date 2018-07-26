@@ -26,8 +26,8 @@ looks like. Remember that templates are in the `templates` folder!
 `render_template`.
 
 You can go back to the command line now and start the server, using
-`python app.py`. In Chrome, go to `http://127.0.0.1:5000` to see what
-it looks like so far.
+`python app.py`. In the browser, go to `http://127.0.0.1:5000` to
+see what it looks like so far.
 
 ### Part 2: Variable Routes
 
