@@ -70,7 +70,6 @@ the information of the student with `student_id`.
 returns the Student object with the given `id`, which is an `int`.
 *Hint*: You can set `student=query_by_id(student_id)` as the second
 parameter of `render_template()`.
- is `student_id`.
 
 ### Part 3
 
