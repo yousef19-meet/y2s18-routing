@@ -4,17 +4,18 @@ Welcome to the routing lab! Please read all the instructions so you don't
 get lost halfway through, but definitely feel free to ask for help if you
 get stuck. Good luck, and have fun!
 
-### Part 0: Setup
+### Setup
 
 Before you start coding, make sure you clone the repository for this lab:
 ```
 cd ~/Desktop
 git clone https://github.com/meet-projects/y2s18-routing.git
-cd y2s18-routing
-subl lab &
+subl y2s18-routing &
 ```
 
 ## Lecture Exercises
+
+**Important**: Work in the `exercises` folder!
 
 ### Part 1: Basic routing
 
@@ -44,40 +45,72 @@ In `student.html`, add a link to the home page.
 
 *Hint*: Remember how to use `url_for()`.
 
-## Independent Lab
+### Part 4: Static Routing
 
-### Part 1: Displaying student information
+In `home.html` and `student.html` in the `templates` folder,
+change the `href` attribute of the `<link>` tag to be
+`{{url_for('static', filename='style.css')}}`.
 
-1. In `app.py`, in `display_student(student_id)`, assign a variable
-called `student` to the `Student` object whose `id` is `student_id`.
+## Independent Lab: Displaying student information
+
+**Important**: Work in the `lab` folder!
+
+### Part 1
+
+In `student.html`, add some text and the templating elements
+`{{ student.name }}`, `{{ student.year }}`, and `{{ student.finished_lab }}`.
+*Hint*: `student.name` returns the `name` attribute of `student`.
+
+### Part 2
+
+In `app.py`, in the `return` statement of `display_student(student_id)`,
+change the parameters of `render_template()` for the template to display
+the information of the student with `student_id`.
 *Hint*: In `databases.py`, there is a function called `query_by_id(id)` that
 returns the Student object with the given `id`, which is an `int`.
+*Hint*: You can set `student=query_by_id(student_id)` as the second
+parameter of `render_template()`.
+ is `student_id`.
 
-2. In `student.html`, add some text and the templating elements `{{ name }}`,
-`{{ year }}`, and `{{ finished_lab }}`.
+### Part 3
 
-3. Back to `display_student(student_id)` in `app.py`. Edit the return
-statement to give the template all the information it needs.
-*Hint*: `student.name` should give you the `name` attribute of the
-`Student` object called `student`.
-
-4. Refresh your webpage in the browser to make sure everything works as
+Refresh your webpage in the browser to make sure everything works as
 expected. If there are errors and the server goes down, you can restart
 the server from the command line with `python app.py` again.
 
-5. Make your new website prettier by adding your own CSS and additional
+### Part 4
+
+Make your new website prettier by adding your own CSS and additional
 templating like you've learned in the past few days!
 
-### Part 2: Listing all students
+## Lab Bonus: Listing all students
 
-1. In `home.html`, add templating code to display the name, year, and
+### Part 1
+
+In `home.html`, add templating code to display the name, year, and
 finished_lab status of each student, using `{% for %}` and `{% endfor %}`.
 
-2. Edit the route to the home page to give `home.html` all the information
+### Part 2
+
+Edit the route to the home page to give `home.html` all the information
 it needs. *Hint*: You'll want to use `query_all()`.
 
-3. In the `home.html` template, add a link in the same `for` loop which will
+### Part 3
+
+In the `home.html` template, add a link in the same `for` loop which will
 bring you to the page for each student.
 
-4. Again, check that everything works in the browser. Refresh your server if
+### Part 4
+
+Again, check that everything works in the browser. Restart your server if
 it goes down again, with `python app.py`.
+
+
+## Additional bonuses
+
+1. Add a new page with all the students from a given year, with a home page
+for each year.
+
+2. Figure out a way to add a photo to each student's page.
+
+3. Incorporate a color scheme.
