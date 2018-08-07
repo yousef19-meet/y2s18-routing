@@ -10,7 +10,7 @@ Before you start coding, make sure you clone the repository for this lab:
 ```
 cd ~/Desktop
 git clone https://github.com/meet-projects/y2s18-routing.git
-subl y2s18-routing &
+subl y2s18-routing
 ```
 
 ## Lecture Exercises
@@ -47,10 +47,6 @@ In `student.html`, add a link to the home page.
 
 ### Part 4: Static Routing
 
-In `home.html` and `student.html` in the `templates` folder,
-change the `href` attribute of the `<link>` tag to be
-`{{url_for('static', filename='style.css')}}`.
-
 ## Independent Lab: Displaying student information
 
 **Important**: Work in the `lab` folder!
@@ -80,8 +76,10 @@ the server from the command line with `python app.py` again.
 
 ### Part 4
 
-Make your new website prettier by adding your own CSS and additional
-templating like you've learned in the past few days!
+In all the files in the `templates` folder, change the `href` attribute
+of the `<link>` tag to be `{{url_for('static', filename='style.css')}}`.
+Add your own CSS and additional templating like you've learned in the
+past few days!
 
 ## Lab Bonus: Listing all students
 
