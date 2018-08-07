@@ -10,9 +10,7 @@ Before you start coding, make sure you fork and clone the repository
 for this lab:
 ```
 cd ~/Desktop
-git clone https://github.com/YOUR-GITHUB-USERNAME/y2s18-routing.git
-cd y2s18-routing
-subl .
+git clone https://github.com/YOUR_GITHUB_USERNAME/y2s18-routing.git
 ```
 
 ## Lecture Exercises
@@ -46,8 +44,6 @@ In `app.py`, add a route and call the function for this route
 In `student.html`, add a link to the home page.
 
 *Hint*: Remember how to use `url_for()`.
-
-### Part 4: Static Routing
 
 ## Independent Lab: Displaying student information
 
