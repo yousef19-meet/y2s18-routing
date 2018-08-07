@@ -6,11 +6,13 @@ get stuck. Good luck, and have fun!
 
 ### Setup
 
-Before you start coding, make sure you clone the repository for this lab:
+Before you start coding, make sure you fork and clone the repository
+for this lab:
 ```
 cd ~/Desktop
-git clone https://github.com/meet-projects/y2s18-routing.git
-subl y2s18-routing
+git clone https://github.com/YOUR-GITHUB-USERNAME/y2s18-routing.git
+cd y2s18-routing
+subl .
 ```
 
 ## Lecture Exercises
