@@ -6,7 +6,7 @@ def hello_world():
     return render_template('home.html')
 
 @app.route('/hello')
-def hello_route(name='Emily'):
-    return render_template('hello.html', n=name)
+def hello_route():
+    return render_template('hello.html', n = 'Emily')
 
 app.run(debug=True)

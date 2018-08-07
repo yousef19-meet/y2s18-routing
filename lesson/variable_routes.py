@@ -13,4 +13,11 @@ def hello_route(name='Emily'):
 def hello_name_route(name='Emily'):
     return render_template('hello.html', n=name)
 
+# Comment out the two previous routes and show
+# that this combined route does the same thing
+# @app.route('/hello')
+# @app.route('/hello/<string:name>')
+# def hello_route(name='Emily'):
+#     return render_template('hello.html', n=name)
+
 app.run(debug=True)

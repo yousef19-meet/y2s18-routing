@@ -9,8 +9,4 @@ def index():
 def hello():
     return 'Hello, World'
 
-# Class exercise: Add a route to /goodbye that says something.
-
-# YOUR CODE HERE
-
 app.run(debug=True)
